@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## ReturnCheck
 
-You can use the [editor on GitHub](https://github.com/Lancric/ReturnCheck/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is just an edited version of Eternal's Retcheck which will be found here: https://eternalv3.github.io/Retcheck/ . I wouldn't count this as 'mine' because it is just an edited version of Eternal's but it would be appreciated if you did credit me.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
 ```cpp
 #define gay
 ```

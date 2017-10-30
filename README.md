@@ -1,6 +1,11 @@
 ## ReturnCheck
 
-This is just an edited version of Eternal's Retcheck which will be found here: https://eternalv3.github.io/Retcheck/ . I wouldn't count this as 'mine' because it is just an edited version of Eternal's but it would be appreciated if you did credit me.
+There are many other ReturnChecks around for ROBLOX, like [Eternal's ReturnCheck Bypass](https://eternalv3.github.io/Retcheck/), etc. This isn't an 'expert' way of Bypassing this Check. 
+
+For this Bypass, you will need:
+-Knowledge of 'CPP'
+-Understanding of the Check
+-Yourselves
 
 
 ```cpp

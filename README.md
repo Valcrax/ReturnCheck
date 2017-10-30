@@ -1,6 +1,6 @@
 ## ReturnCheck
 
-There are many other ReturnChecks around for ROBLOX, like [Eternal's ReturnCheck Bypass](https://eternalv3.github.io/Retcheck/), and [Variable's ReturnCheck Bypass](https://v3rmillion.net/showthread.php?tid=148727), This isn't an 'expert' way of Bypassing this Check. 
+There are many other ReturnChecks around for ROBLOX, like [Eternal's ReturnCheck Bypass](https://eternalv3.github.io/Retcheck/), and [Variable's ReturnCheck Bypass](https://v3rmillion.net/showthread.php?tid=148727), This isn't an 'expert' way of Bypassing this Check. It'll be great if you credit me.
 
 ______________________________________________
 
@@ -9,7 +9,7 @@ ______________________________________________
  
  ____________________________________________
  
- ### About-IntegrityChecker                                                     
+### About-IntegrityChecker                                                     
  This check is also like 'Retcheck', there is a more-common name for this Check, and it is 'The BIG HULK' (jks). No, it's called the Memory Checker. This checker is probably the most hardest to bypass. It scans for certain parts, maybe all to check if there had been any 'Memory Modifications' hence the name Memory Check.
  
 ____________________________________________

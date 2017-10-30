@@ -1,11 +1,9 @@
 ## ReturnCheck
 
-There are many other ReturnChecks around for ROBLOX, like [Eternal's ReturnCheck Bypass](https://eternalv3.github.io/Retcheck/), etc. This isn't an 'expert' way of Bypassing this Check. 
+There are many other ReturnChecks around for ROBLOX, like [Eternal's ReturnCheck Bypass](https://eternalv3.github.io/Retcheck/), and [Variable's ReturnCheck Bypass](https://v3rmillion.net/showthread.php?tid=148727), This isn't an 'expert' way of Bypassing this Check. 
 
-For this Bypass, you will need:
--Knowledge of 'CPP'
--Understanding of the Check
--Yourselves
+______________________________________________
+                ReturnCheck
 
 
 ```cpp

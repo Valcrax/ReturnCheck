@@ -16,7 +16,68 @@ ____________________________________________
 
 ### Getting-Started
 
-```markdown
+As I had said before, the Return Check is basically in every Lua C API (not all) function. This is a picture of 'The FULL Check'.
 ![ScreenShot](41dc3814d1bc48f7ee82637a23a28fbf.png)
+
+In out code, we need to bypass it and the return it back to the original Function, so that it would not trigger the Memory Check. We will store the Functions in DWORDS.
+
+```cpp
+DWORD sFlag1, sFlag2, sRetFunc, OldProtect;
 ```
-![ScreenShot](41dc3814d1bc48f7ee82637a23a28fbf.png)
+Time to start the bypassing. First we need to store the Flags like this:
+
+```cpp
+	sFlag1 = *(DWORD*)Flag1;
+	sRetFunc = *(DWORD*)Retfunc;
+	sFlag2 = *(DWORD*)Flag2;
+ ````
+ Once this is done, we need to starting 'Bypassing' this, so we need to Change the protection to PAGE_EXECUTION_READWRITE to edit it
+ ```cpp
+ VirtualProtect((void*)Retfunc, 1, PAGE_EXECUTE_READWRITE, &OldProtect);
+ ```
+ And now, we need to Return the function, we will do it like this:
+ ```cpp
+ memcpy((void*)Retfunc, "\xC2", 1); // RETN OP Codes
+ ```
+ 
+ Now that we have finishing bypassing the Function, we now need to restore the function back to the original Function. We will make the Flags return to the RetFunctions:
+ 
+ ```cpp
+ 	*(DWORD*)Flag1 = sFlag1;
+	*(DWORD*)Retfunc = sRetFunc;
+	*(DWORD*)Flag2 = sFlag2;
+ VirtualProtect((void*)Retfunc, 1, OldProtect, &OldProtect);
+ ```
+ 
+ So Overall, we would Bypass Retcheck like this :
+ ```cpp
+ inline void Bypass() {
+	sFlag1 = *(DWORD*)Flag1;
+	sRetFunc = *(DWORD*)Retfunc;
+	sFlag2 = *(DWORD*)Flag2;
+	VirtualProtect((void*)Retfunc, 1, PAGE_EXECUTE_READWRITE, &OldProtect);
+	memcpy((void*)Retfunc, wbyte, 1);
+}
+```
+Before restoring it back to the original Function like this:
+```cpp
+inline void Restore() {
+	*(DWORD*)Flag1 = sFlag1;
+	*(DWORD*)Retfunc = sRetFunc;
+	*(DWORD*)Flag2 = sFlag2;
+	VirtualProtect((void*)Retfunc, 1, OldProtect, &OldProtect);
+}
+```
+
+So To bypass 'Retcheck', we would 
+```cpp
+Bypass(); // Bypass it
+// Function
+Restore(); // Restore it
+```
+
+### The-END
+
+
+
+EDIT: I have made this Retcheck for a while, and it is now basically like 'MemehaxV2's' Retcheck which I have no idea of, this is my second github account btw. Anyway Cya!

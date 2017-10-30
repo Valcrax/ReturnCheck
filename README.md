@@ -56,7 +56,7 @@ Time to start the bypassing. First we need to store the Flags like this:
 	sRetFunc = *(DWORD*)Retfunc;
 	sFlag2 = *(DWORD*)Flag2;
 	VirtualProtect((void*)Retfunc, 1, PAGE_EXECUTE_READWRITE, &OldProtect);
-	memcpy((void*)Retfunc, wbyte, 1);
+	memcpy((void*)Retfunc, "\xC2", 1);
 }
 ```
 Before restoring it back to the original Function like this:

@@ -17,5 +17,6 @@ ____________________________________________
 ### Getting-Started
 
 ```markdown
-![ScreenShot](https://gyazo.com/41dc3814d1bc48f7ee82637a23a28fbf)
+![ScreenShot](41dc3814d1bc48f7ee82637a23a28fbf.png)
 ```
+![ScreenShot](41dc3814d1bc48f7ee82637a23a28fbf.png)
